@@ -5,7 +5,7 @@ using System.Runtime.InteropServices; // Don't forget this!
 public class VideoMesh : MonoBehaviour {
 	
 	void Start () {
-		// not necessary now, but we'll use it later
+		SetVideo("Hello from Unity!");
 	}
 
 
