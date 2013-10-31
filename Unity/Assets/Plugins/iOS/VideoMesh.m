@@ -21,4 +21,13 @@ void _pause() {
 
 @implementation VideoMesh
 
+static VideoMesh *sharedInstance = nil;
++(VideoMesh*)sharedInstance {
+    if( !sharedInstance )
+        sharedInstance = [[VideoMesh alloc] init];
+    
+    return sharedInstance;
+}
+
+
 @end
