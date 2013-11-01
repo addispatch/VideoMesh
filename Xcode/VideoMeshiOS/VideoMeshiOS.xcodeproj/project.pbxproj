@@ -585,6 +585,7 @@
 				2D29F9711820A05E00ED1DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D29F9721820A05E00ED1DAF /* Build configuration list for PBXNativeTarget "VideoMeshiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +594,7 @@
 				2D29F9741820A05E00ED1DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D29F9861820A1C600ED1DAF /* Build configuration list for PBXNativeTarget "VideoMesh" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +603,7 @@
 				2D29F9881820A1C600ED1DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

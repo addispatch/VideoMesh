@@ -7,11 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <OpenGL/OpenGL.h>
+#import <AVFoundation/AVFoundation.h>
+
 
 void _setVideo(const char *);
 void _play();
 void _pause() ;
 
-@interface VideoMesh : NSObject
+@interface VideoMesh : NSObject {
+    AVPlayer *videoPlayer;
+    AVPlayerItemVideoOutput *videoOutput;
+    GLuint texID;
+}
+
+@property (nonatomic, retain) AVPlayer *videoPlayer;
+@property (nonatomic, retain) AVPlayerItemVideoOutput *videoOutput;
+@property (nonatomic, assign) GLuint texID;
+
++(VideoMesh*)sharedInstance;
+
+-(void)setTexture:(GLuint)tex;
+-(void)setVideo:(NSString*)filePath;
+
+-(void)update;
 
 @end
