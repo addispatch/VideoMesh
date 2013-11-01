@@ -12,12 +12,12 @@ void _update() {
     [[VideoMesh sharedInstance] update];
 }
 
-void _setTexID(GLuint texID) {
+void _setTexture(GLuint texID) {
     [[VideoMesh sharedInstance] setTexture:texID];
 }
 
 void _setVideo(const char * filename) {
-    NSLog(@"Native plugin: %@", [NSString stringWithUTF8String:filename]);
+    [[VideoMesh sharedInstance] setVideo:[NSString stringWithUTF8String:filename]];
 }
 
 void _play() {
@@ -55,6 +55,7 @@ static VideoMesh *sharedInstance = nil;
 
 
 -(void)setVideo:(NSString*)filePath {
+    NSLog(@"Attempting to load %@", filePath);
     
     NSURL *file = [NSURL URLWithString:filePath];
     
@@ -66,9 +67,9 @@ static VideoMesh *sharedInstance = nil;
     self.videoPlayer = [[AVPlayer alloc] initWithURL:file];
     
     
-    NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange)};
+    //NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange)};
     
-    //NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
+    NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
     
     if (self.videoOutput != nil) {
         [self.videoOutput release];
@@ -102,14 +103,15 @@ static VideoMesh *sharedInstance = nil;
         
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)width, (GLsizei)height, 0, GL_BGRA_EXT, GL_UNSIGNED_BYTE, CVPixelBufferGetBaseAddress(buffer));
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)width, (GLsizei)height, 0, GL_BGRA, GL_UNSIGNED_BYTE, (uint8_t *)CVPixelBufferGetBaseAddress(buffer));
         
         // Unlock the image buffer
         CVPixelBufferUnlockBaseAddress(buffer, 0);
         //CFRelease(sampleBuffer);
         CVBufferRelease(buffer);
-        
     }
 }
 

@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OpenGL/OpenGL.h>
 #import <AVFoundation/AVFoundation.h>
 
-
+void _update();
+void _setTexture(GLuint);
 void _setVideo(const char *);
 void _play();
 void _pause() ;

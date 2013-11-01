@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D290F981823619A005E282F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D290F9718236199005E282F /* OpenGLES.framework */; };
 		2D29F9411820A05D00ED1DAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F9401820A05D00ED1DAF /* Foundation.framework */; };
 		2D29F9431820A05D00ED1DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F9421820A05D00ED1DAF /* CoreGraphics.framework */; };
 		2D29F9451820A05D00ED1DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F9441820A05D00ED1DAF /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D290F9718236199005E282F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		2D29F93D1820A05D00ED1DAF /* VideoMeshiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoMeshiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D29F9401820A05D00ED1DAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D29F9421820A05D00ED1DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D290F981823619A005E282F /* OpenGLES.framework in Frameworks */,
 				2D29F9431820A05D00ED1DAF /* CoreGraphics.framework in Frameworks */,
 				2D29F9451820A05D00ED1DAF /* UIKit.framework in Frameworks */,
 				2D29F9411820A05D00ED1DAF /* Foundation.framework in Frameworks */,
@@ -124,6 +127,7 @@
 		2D29F93F1820A05D00ED1DAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D290F9718236199005E282F /* OpenGLES.framework */,
 				2D29F9401820A05D00ED1DAF /* Foundation.framework */,
 				2D29F9421820A05D00ED1DAF /* CoreGraphics.framework */,
 				2D29F9441820A05D00ED1DAF /* UIKit.framework */,
