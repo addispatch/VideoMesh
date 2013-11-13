@@ -12,6 +12,10 @@ void _update() {
     [[VideoMesh sharedInstance] update];
 }
 
+void _setLogCallback(callbackFunc cb) {
+    [[VideoMesh sharedInstance] setLogCallback:cb];
+}
+
 void _setTexture(GLuint texID) {
     [[VideoMesh sharedInstance] setTexture:texID];
 }
@@ -32,6 +36,8 @@ void _pause() {
 @implementation VideoMesh
 
 @synthesize texID, videoOutput, videoPlayer;
+
+@synthesize logCallback;
 
 static VideoMesh *sharedInstance = nil;
 +(VideoMesh*)sharedInstance {
@@ -54,8 +60,17 @@ static VideoMesh *sharedInstance = nil;
 }
 
 
+-(void)unityLog:(NSString*)message {
+    NSLog(@"%@", message);
+    if (self.logCallback != NULL) {
+        self.logCallback([message UTF8String]);
+    }
+}
+
+
 -(void)setVideo:(NSString*)filePath {
     NSLog(@"Attempting to load %@", filePath);
+    [self unityLog:filePath];
     
     NSURL *file = [NSURL URLWithString:filePath];
     
@@ -65,22 +80,23 @@ static VideoMesh *sharedInstance = nil;
     }
     
     self.videoPlayer = [[AVPlayer alloc] initWithURL:file];
-    
-    
-    //NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange)};
-    
-    NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
+
+    if (self.videoPlayer != nil) {
+        [self unityLog:@"Player initialized"];
+    } else {
+        [self unityLog:@"Error initializing"];
+    }
     
     if (self.videoOutput != nil) {
         [self.videoOutput release];
         self.videoOutput = nil;
     }
-    
+
+    NSDictionary *pixBuffAttributes = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};
     self.videoOutput = [[AVPlayerItemVideoOutput alloc]
                                        initWithPixelBufferAttributes:pixBuffAttributes];
     
     [self.videoPlayer.currentItem addOutput:self.videoOutput];
-    
 }
 
 
@@ -108,10 +124,13 @@ static VideoMesh *sharedInstance = nil;
         
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)width, (GLsizei)height, 0, GL_BGRA, GL_UNSIGNED_BYTE, (uint8_t *)CVPixelBufferGetBaseAddress(buffer));
         
+
+        
         // Unlock the image buffer
         CVPixelBufferUnlockBaseAddress(buffer, 0);
-        //CFRelease(sampleBuffer);
         CVBufferRelease(buffer);
+        
+        glFinish();
     }
 }
 

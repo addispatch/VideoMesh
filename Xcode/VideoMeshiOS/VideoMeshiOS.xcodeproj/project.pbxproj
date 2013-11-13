@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2D290F981823619A005E282F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D290F9718236199005E282F /* OpenGLES.framework */; };
+		2D290F9E1823FEF1005E282F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F97D1820A1C600ED1DAF /* CoreFoundation.framework */; };
+		2D290FA41823FEF1005E282F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D290FA21823FEF1005E282F /* InfoPlist.strings */; };
+		2D290FAA1823FF42005E282F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D290FA91823FF42005E282F /* Foundation.framework */; };
+		2D290FAB1823FF52005E282F /* VideoMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D29F9761820A16900ED1DAF /* VideoMesh.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D290FAD1823FF60005E282F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D290FAC1823FF60005E282F /* OpenGL.framework */; };
+		2D290FAF1824077B005E282F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D290FAE1824077B005E282F /* QuartzCore.framework */; };
 		2D29F9411820A05D00ED1DAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F9401820A05D00ED1DAF /* Foundation.framework */; };
 		2D29F9431820A05D00ED1DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F9421820A05D00ED1DAF /* CoreGraphics.framework */; };
 		2D29F9451820A05D00ED1DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F9441820A05D00ED1DAF /* UIKit.framework */; };
@@ -23,9 +29,6 @@
 		2D29F96A1820A05E00ED1DAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D29F9681820A05E00ED1DAF /* InfoPlist.strings */; };
 		2D29F96C1820A05E00ED1DAF /* VideoMeshiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D29F96B1820A05E00ED1DAF /* VideoMeshiOSTests.m */; };
 		2D29F9771820A16900ED1DAF /* VideoMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D29F9761820A16900ED1DAF /* VideoMesh.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2D29F97E1820A1C600ED1DAF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D29F97D1820A1C600ED1DAF /* CoreFoundation.framework */; };
-		2D29F9841820A1C600ED1DAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D29F9821820A1C600ED1DAF /* InfoPlist.strings */; };
-		2D29F9891820A1E800ED1DAF /* VideoMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D29F9761820A16900ED1DAF /* VideoMesh.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,13 @@
 
 /* Begin PBXFileReference section */
 		2D290F9718236199005E282F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2D290F9D1823FEF1005E282F /* VideoMesh.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoMesh.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D290FA11823FEF1005E282F /* VideoMesh-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VideoMesh-Info.plist"; sourceTree = "<group>"; };
+		2D290FA31823FEF1005E282F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2D290FA51823FEF1005E282F /* VideoMesh-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoMesh-Prefix.pch"; sourceTree = "<group>"; };
+		2D290FA91823FF42005E282F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2D290FAC1823FF60005E282F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		2D290FAE1824077B005E282F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		2D29F93D1820A05D00ED1DAF /* VideoMeshiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoMeshiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D29F9401820A05D00ED1DAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D29F9421820A05D00ED1DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,7 +71,6 @@
 		2D29F96B1820A05E00ED1DAF /* VideoMeshiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoMeshiOSTests.m; sourceTree = "<group>"; };
 		2D29F9751820A16900ED1DAF /* VideoMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoMesh.h; path = ../../Unity/Assets/Plugins/iOS/VideoMesh.h; sourceTree = "<group>"; };
 		2D29F9761820A16900ED1DAF /* VideoMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoMesh.m; path = ../../Unity/Assets/Plugins/iOS/VideoMesh.m; sourceTree = "<group>"; };
-		2D29F97C1820A1C600ED1DAF /* VideoMesh.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoMesh.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D29F97D1820A1C600ED1DAF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		2D29F9811820A1C600ED1DAF /* VideoMesh-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VideoMesh-Info.plist"; sourceTree = "<group>"; };
 		2D29F9831820A1C600ED1DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -69,6 +78,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2D290F9A1823FEF1005E282F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D290FAF1824077B005E282F /* QuartzCore.framework in Frameworks */,
+				2D290FAD1823FF60005E282F /* OpenGL.framework in Frameworks */,
+				2D290FAA1823FF42005E282F /* Foundation.framework in Frameworks */,
+				2D290F9E1823FEF1005E282F /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D29F93A1820A05D00ED1DAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,17 +110,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D29F9791820A1C600ED1DAF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D29F97E1820A1C600ED1DAF /* CoreFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D290F9F1823FEF1005E282F /* VideoMesh */ = {
+			isa = PBXGroup;
+			children = (
+				2D290FA01823FEF1005E282F /* Supporting Files */,
+			);
+			path = VideoMesh;
+			sourceTree = "<group>";
+		};
+		2D290FA01823FEF1005E282F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D290FA11823FEF1005E282F /* VideoMesh-Info.plist */,
+				2D290FA21823FEF1005E282F /* InfoPlist.strings */,
+				2D290FA51823FEF1005E282F /* VideoMesh-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		2D29F9341820A05D00ED1DAF = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +139,7 @@
 				2D29F9461820A05D00ED1DAF /* VideoMeshiOS */,
 				2D29F9651820A05E00ED1DAF /* VideoMeshiOSTests */,
 				2D29F97F1820A1C600ED1DAF /* VideoMesh */,
+				2D290F9F1823FEF1005E282F /* VideoMesh */,
 				2D29F93F1820A05D00ED1DAF /* Frameworks */,
 				2D29F93E1820A05D00ED1DAF /* Products */,
 			);
@@ -119,7 +150,7 @@
 			children = (
 				2D29F93D1820A05D00ED1DAF /* VideoMeshiOS.app */,
 				2D29F95E1820A05E00ED1DAF /* VideoMeshiOSTests.xctest */,
-				2D29F97C1820A1C600ED1DAF /* VideoMesh.bundle */,
+				2D290F9D1823FEF1005E282F /* VideoMesh.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +158,9 @@
 		2D29F93F1820A05D00ED1DAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D290FAE1824077B005E282F /* QuartzCore.framework */,
+				2D290FAC1823FF60005E282F /* OpenGL.framework */,
+				2D290FA91823FF42005E282F /* Foundation.framework */,
 				2D290F9718236199005E282F /* OpenGLES.framework */,
 				2D29F9401820A05D00ED1DAF /* Foundation.framework */,
 				2D29F9421820A05D00ED1DAF /* CoreGraphics.framework */,
@@ -201,6 +235,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2D290F9C1823FEF1005E282F /* VideoMesh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D290FA61823FEF1005E282F /* Build configuration list for PBXNativeTarget "VideoMesh" */;
+			buildPhases = (
+				2D290F991823FEF1005E282F /* Sources */,
+				2D290F9A1823FEF1005E282F /* Frameworks */,
+				2D290F9B1823FEF1005E282F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoMesh;
+			productName = VideoMesh;
+			productReference = 2D290F9D1823FEF1005E282F /* VideoMesh.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		2D29F93C1820A05D00ED1DAF /* VideoMeshiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D29F96F1820A05E00ED1DAF /* Build configuration list for PBXNativeTarget "VideoMeshiOS" */;
@@ -236,23 +287,6 @@
 			productReference = 2D29F95E1820A05E00ED1DAF /* VideoMeshiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2D29F97B1820A1C600ED1DAF /* VideoMesh */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D29F9861820A1C600ED1DAF /* Build configuration list for PBXNativeTarget "VideoMesh" */;
-			buildPhases = (
-				2D29F9781820A1C600ED1DAF /* Sources */,
-				2D29F9791820A1C600ED1DAF /* Frameworks */,
-				2D29F97A1820A1C600ED1DAF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = VideoMesh;
-			productName = VideoMesh;
-			productReference = 2D29F97C1820A1C600ED1DAF /* VideoMesh.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,12 +317,20 @@
 			targets = (
 				2D29F93C1820A05D00ED1DAF /* VideoMeshiOS */,
 				2D29F95D1820A05E00ED1DAF /* VideoMeshiOSTests */,
-				2D29F97B1820A1C600ED1DAF /* VideoMesh */,
+				2D290F9C1823FEF1005E282F /* VideoMesh */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2D290F9B1823FEF1005E282F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D290FA41823FEF1005E282F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D29F93B1820A05D00ED1DAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,17 +349,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D29F97A1820A1C600ED1DAF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D29F9841820A1C600ED1DAF /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D290F991823FEF1005E282F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D290FAB1823FF52005E282F /* VideoMesh.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D29F9391820A05D00ED1DAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,14 +379,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D29F9781820A1C600ED1DAF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D29F9891820A1E800ED1DAF /* VideoMesh.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -356,6 +390,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2D290FA21823FEF1005E282F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D290FA31823FEF1005E282F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		2D29F9491820A05D00ED1DAF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -391,6 +433,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2D290FA71823FEF1005E282F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoMesh/VideoMesh-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VideoMesh/VideoMesh-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = i386;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		2D290FA81823FEF1005E282F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VideoMesh/VideoMesh-Prefix.pch";
+				INFOPLIST_FILE = "VideoMesh/VideoMesh-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = i386;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		2D29F96D1820A05E00ED1DAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -531,48 +614,17 @@
 			};
 			name = Release;
 		};
-		2D29F9871820A1C600ED1DAF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VideoMesh/VideoMesh-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "VideoMesh/VideoMesh-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		2D29F9881820A1C600ED1DAF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VideoMesh/VideoMesh-Prefix.pch";
-				INFOPLIST_FILE = "VideoMesh/VideoMesh-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D290FA61823FEF1005E282F /* Build configuration list for PBXNativeTarget "VideoMesh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D290FA71823FEF1005E282F /* Debug */,
+				2D290FA81823FEF1005E282F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2D29F9381820A05D00ED1DAF /* Build configuration list for PBXProject "VideoMeshiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -596,15 +648,6 @@
 			buildConfigurations = (
 				2D29F9731820A05E00ED1DAF /* Debug */,
 				2D29F9741820A05E00ED1DAF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D29F9861820A1C600ED1DAF /* Build configuration list for PBXNativeTarget "VideoMesh" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D29F9871820A1C600ED1DAF /* Debug */,
-				2D29F9881820A1C600ED1DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
